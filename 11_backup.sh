@@ -46,7 +46,7 @@ log_message() {
 # Функция записи критических сообщений
 error_log() { 
     local message="$1"
-    [ -f "$ERROR_SH" ] && "$ERROR_SH" "SHOP${SHOP__NO}: ${message}" || \
+    [ -f "$ERROR_SH" ] && { [ -x "$ERROR_SH" ] || chmod +x "$ERROR_SH"; } && "$ERROR_SH" "SHOP${SHOP__NO}: ${message}" || \
         echo "ОШИБКА: $ERROR_SH не найден! ${SHOP__NO}: ${message}" | tee -a "$LOG__PNT"
 }
 
