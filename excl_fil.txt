@@ -1,0 +1,15 @@
+*.txt
+*.l
+*.odb
+FcsRef.rdb
+Inst0357.eng
+Inst0357.fcs
+SFDATA.a
+PjtRef.rdb
+DataLink.bin
+GenericName.bin
+Main.baml
+Main.bin
+Main.xaml
+HisRef.rdb
+TagRef.rdb
